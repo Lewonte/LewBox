@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AssemblyName>testgame</AssemblyName>
+		<PackageId>testgame</PackageId>
+		<LangVersion>preview</LangVersion>
+		<NoWarn>1701;1702;1591;</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="NewFolder\**" />
+	  <EmbeddedResource Remove="NewFolder\**" />
+	  <None Remove="NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="**\*.scss" DependentUpon="%(Filename).cs" />
+		<None Update="**\*.css" DependentUpon="%(Filename).cs" />
+		<None Update="**\*.sass" DependentUpon="%(Filename).cs" />
+		<None Update="**\*.html" DependentUpon="%(Filename).cs" />
+		<None Update="**\*.htm" DependentUpon="%(Filename).cs" />
+	</ItemGroup>
+
+  <PropertyGroup>
+	<OutputPath>../.intermediate/</OutputPath>
+	<DocumentationFile>../.intermediate/netstandard2.0/testgame.xml</DocumentationFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Analyzer Include="C:/Program Files (x86)/Steam/steamapps/common/sbox/bin/managed/Sandbox.Generator.dll" />
+		<Reference Include="C:/Program Files (x86)/Steam/steamapps/common/sbox/bin/managed/Sandbox.System.dll" />
+		<Reference Include="C:/Program Files (x86)/Steam/steamapps/common/sbox/bin/managed/Sandbox.Engine.dll" />
+		<Reference Include="C:/Program Files (x86)/Steam/steamapps/common/sbox/bin/managed/Sandbox.Game.dll" />
+	</ItemGroup>
+
+  <ItemGroup>
+<ProjectReference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\Addons\base\code\base.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Numerics;
 using System.Threading;
+using Lewtest;
 
 partial class DeathmatchPlayer : Player
 {
@@ -19,7 +20,7 @@ partial class DeathmatchPlayer : Player
 	{
 		SetModel( "models/citizen/citizen.vmdl" );
 
-		Controller = new WalkController();
+		Controller = new PlayerController();
 		Animator = new StandardPlayerAnimator();
 		Camera = new FirstPersonCamera();
 		  
