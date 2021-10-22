@@ -26,7 +26,7 @@ namespace Lewtest
 		public float Speed => 310.0f;
 		public float AirSpeed => 240.0f;
 		public float Acceleration => 10.0f;
-		public float AirAcceleration => 14.0f;
+		public float AirAcceleration => 10.0f;
 		public float GroundFriction => 4.0f;
 		public float StopSpeed => 100.0f;
 		public float DistEpsilon => 0.03125f;
@@ -39,8 +39,8 @@ namespace Lewtest
 		public float Gravity => 800.0f;
 		public bool AutoJump => true;
 		public float JumpMultiplier => 0.9f;
-		public float AirSpeedLimit => 800f;
-		public float SpeedLimit => 800f; // Hard limit (excludes Z)
+		public float AirSpeedLimit => 500f;
+		public float SpeedLimit => 600f; // Hard limit (excludes Z)
 
 		[Net, Predicted] public bool CanMove { get; set; } = true;
 
